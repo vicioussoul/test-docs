@@ -1,0 +1,148 @@
+/*! sphinx-book-theme CSS
+ * BSD 3-Clause License
+ * Copyright (c) 2020, EBP
+ * All rights reserved.
+ *
+ * This follows the 7-1 pattern described here:
+ * https://sass-guidelin.es/#architecture
+ */
+
+.bd-page-width {
+    max-width: 95%; /* ширина всего контента документации */
+}
+
+.bd-sidebar-primary::-webkit-scrollbar {
+    width: 0; /* костыль, чтобы спрятать скролл в сайдбаре слева */
+}
+
+.bd-content .sd-tab-set>input:checked+label {
+    border-width: .0875rem .0875rem 0;
+}
+
+.bd-content .sd-tab-set .sd-tab-content {
+    border: .0875rem solid var(--pst-color-primary)
+}
+
+body {
+    line-height: 1.45;
+}
+
+p {
+    margin-bottom: 1rem; /* Отступ под параграфом */
+}
+
+ul {
+    margin-bottom: 1rem; /* Отступ под списком */
+}
+
+li p {
+    margin-bottom: 0.5rem; /* Отступ под текстом внутри списка */
+}
+
+img {
+    border: 1px solid var(--pst-color-border);
+    border-left-width: 0.2em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    margin-bottom: 1rem;
+}
+
+html[data-theme="light"] {
+    --pst-color-table-row-hover-bg: #d2d2d2; /* Цвет строки таблицы при наведении */
+}
+
+html[data-theme="dark"] {
+    --pst-color-table-row-hover-bg: #454f5c; /* Цвет строки таблицы при наведении */
+}
+
+h1 {
+    font-size: 34px; /* Размер шрифта */
+}
+
+h2 {
+    font-size: 28px; /* Размер шрифта */
+    margin: 28px 0 20px; /* Отступы */
+    padding-top: 12px; /* Отступ сверху, чтобы текст не касался линии */
+    background-image: linear-gradient(to right, #6a6a6a, rgba(24, 24, 24, 0)); /* Градиентная линия */
+    background-position: top left; /* Позиция линии сверху */
+    background-repeat: no-repeat; /* Отключаем повторение */
+    background-size: 80% 1px; /* Задаем размер линии */
+}
+
+h3 {
+    font-size: 22px; /* Размер шрифта */
+    margin: 22px 0 18px; /* Отступы */
+    font-weight: 500; /* Толщина */
+    padding-top: 10px; /* Отступ сверху, чтобы текст не касался линии */
+    background-image: linear-gradient(to right, #bdbdbd, rgba(24, 24, 24, 0)); /* Градиентная линия */
+    background-position: top left; /* Позиция линии сверху */
+    background-repeat: no-repeat; /* Отключаем повторение */
+    background-size: 80% 1px; /* Задаем размер линии */
+}
+
+h4 {
+    font-size: 20px; /* Размер шрифта */
+    margin: 20px 0 16px; /* Отступы */
+    font-weight: 480; /* Толщина */
+}
+
+.logo__image.only-light {
+    box-shadow: none;
+    border: none;
+}
+
+.logo__image.only-dark.pst-js-only {
+    box-shadow: none;
+    border: none;
+}
+
+abbr[data-title] {
+    position: relative;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 2px;
+}
+
+abbr[data-title]::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e6e6e6;
+    color: #000000;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    font-size: 0.8em;
+}
+
+abbr[data-title]:hover::after {
+    opacity: 1;
+}
+
+.sd-bg-text-warning {
+    color: var(--sd-color-danger-text) !important;
+}
+
+html {
+    --pst-icon-admonition-default: "\f044" /* https://fontawesome.com/v4/icon/pencil-square-o */
+}
+
+.admonition>.admonition-title, div.admonition>.admonition-title[data-theme="light"] {
+    background-color: #f2f3ffc9;
+}
+
+.admonition>.admonition-title, div.admonition>.admonition-title[data-theme="dark"] {
+    background-color: #303ff163;
+}
+
+.admonition, div.admonition {
+    border-color: #f2f3ffc9;
+}
+
+table caption {
+    text-align: left;
+    margin-left: 2rem;
+  }
