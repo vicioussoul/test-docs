@@ -1,4 +1,6 @@
-# Main Internal
+---
+title: Main Internal
+---
 
 123
 
